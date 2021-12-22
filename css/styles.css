@@ -33,6 +33,35 @@ body {
   line-height: 1.16;
   letter-spacing: 0.05em;
 }
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  display: block;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid red;
+}
 
 /* Хедер */
 .back {
@@ -68,6 +97,11 @@ body {
 }
 
 .light-btn {
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  padding: 12px 20px;
+  margin-left: 40px;
+
   color: var(--primary-white-color);
   background-color: #191c26;
 
@@ -77,6 +111,7 @@ body {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* Герой */
@@ -122,22 +157,33 @@ body {
 }
 
 /* О нас */
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+}
 
 .about-pre-title {
+  margin-bottom: 20px;
+
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .about-title {
+  margin-bottom: 20px;
 }
 
 .about-after-title {
+  margin-bottom: 20px;
+
   font-size: 18px;
   line-height: 1.66;
 }
 
 .about-text {
+  margin-bottom: 20px;
+
   color: var(--paragraph-color);
 
   font-size: 14px;
@@ -145,7 +191,12 @@ body {
 }
 
 .dark-btn {
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  padding: 12px 20px;
+
   color: var(--primary-head-color);
+  background-color: transparent;
 
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
