@@ -64,6 +64,9 @@ img {
 }
 
 /* Хедер */
+.header {
+  padding: 32px 0;
+}
 .back {
   background-color: #191c26;
 }
@@ -115,6 +118,8 @@ img {
 }
 
 .light-btn {
+  min-width: 160px;
+  min-height: 40px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
   padding: 12px 20px;
@@ -137,17 +142,13 @@ img {
 }
 
 /* Sidebar */
-.side-direction {
-  background-color: #fff;
-  padding: 360px 50px 140px 78px;
-}
+
 .hero-block {
   display: flex;
 }
 
 .hero-list {
-  display: flex;
-  transform: rotate(270deg);
+  width: 93px;
 }
 
 .hero-item:first-child {
@@ -155,11 +156,12 @@ img {
 }
 /* Герой */
 .main {
-  padding: 206px 96px;
+  flex-grow: 1;
+  background-color: #191c26;
+  padding: 272px 0 206px 96px;
 }
 
 .hero {
-  background-color: #191c26;
 }
 .hero-link {
   color: var(--primary-head-color);
@@ -196,6 +198,7 @@ img {
 }
 
 .hero-after-title {
+  max-width: 400px;
   margin-bottom: 20px;
 
   color: var(--primary-grey-color);
@@ -253,6 +256,8 @@ img {
 }
 
 .dark-btn {
+  min-width: 160px;
+  min-height: 40px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
   padding: 12px 20px;
@@ -395,7 +400,6 @@ img {
 
 .masters-list {
   display: flex;
-  flex-wrap: wrap;
   margin-left: -30px;
 }
 
@@ -427,7 +431,6 @@ img {
 
 .works-list {
   display: flex;
-  flex-wrap: wrap;
   margin-left: -30px;
 }
 
