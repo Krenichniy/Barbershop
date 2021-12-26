@@ -56,7 +56,7 @@ img {
   display: block;
 }
 .container {
-  width: 1170px;
+  width: 1200px;
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
@@ -397,21 +397,30 @@ img {
 }
 
 /* Мастера */
+.masters {
+  padding: 130px 0;
+}
 
 .masters-list {
   display: flex;
-  margin-left: -30px;
+  margin-right: -30px;
 }
 
 .masters-item {
   flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .masters-pre-title {
+  margin-bottom: 20px;
+
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.masters-title {
+  margin-bottom: 44px;
 }
 
 .masters-name {
@@ -428,30 +437,39 @@ img {
 }
 
 /* Наши работы */
+.works {
+  padding: 130px 0;
+}
 
 .works-list {
   display: flex;
-  margin-left: -30px;
+  margin-right: -30px;
 }
 
 .works-item {
   flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .works-after-title {
+  margin-bottom: 44px;
+
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-/* Футер */
-.footer {
+/* НФорма с контактами */
+.contacts-bottom {
+  padding: 130px 0;
   background-color: #191c26;
 }
-.footer-contacts {
+.contacts-bottom-title {
+  margin-bottom: 40px;
+
   color: var(--primary-white-color);
 }
+
 .info {
   color: var(--primary-grey-color);
 
@@ -459,18 +477,44 @@ img {
   line-height: 1.67;
 }
 
-.footer-address {
+.bottom-address {
+  margin-bottom: 20px;
+
   font-style: normal;
 }
 
-.footer-link-mail {
+.bottom-link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.bottom-link-mail {
+  display: inline-block;
+  margin-bottom: 70px;
+
   text-decoration-line: underline;
 }
 
-.footer-shedule {
+.bottom-shedule {
+  margin-bottom: 20px;
+
   color: var(--primary-white-color);
 
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+/* Футер */
+.footer-section {
+  padding: 55px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
 }
