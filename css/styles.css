@@ -156,8 +156,13 @@ img {
 }
 /* Герой */
 .main {
-  flex-grow: 1;
   background-color: #191c26;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url(../images/hero-back.jpg);
+  flex-grow: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 272px 0 206px 96px;
 }
 
@@ -424,16 +429,57 @@ img {
 }
 
 .masters-name {
+  margin-bottom: 8px;
+
   font-size: 18px;
   line-height: 1.38;
   text-align: center;
 }
 
 .masters-degree {
+  margin-bottom: 30px;
+
   color: var(--accent-color);
 
   font-size: 14px;
   text-align: center;
+}
+
+.masters-descript {
+  padding-top: 30px;
+}
+
+.masters-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.masters-social-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--primary-head-color);
+  border-radius: 50%;
+}
+
+.masters-social-link:hover,
+.masters-social-link:focus {
+  color: var(--accent-color);
+}
+
+.masters-social-item + .masters-social-item {
+  margin-left: 10px;
+}
+
+.masters-social-icon {
+  fill: currentColor;
+  background-size: contain;
+  background-position: center;
 }
 
 /* Наши работы */
@@ -459,7 +505,7 @@ img {
   text-transform: uppercase;
 }
 
-/* НФорма с контактами */
+/* Форма с контактами */
 .contacts-bottom {
   padding: 130px 0;
   background-color: #191c26;
