@@ -443,10 +443,24 @@ img {
 }
 
 .recommendations-number {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
   font-weight: 700;
   font-size: 42px;
   text-align: center;
   letter-spacing: 0.05em;
+}
+
+.recommendations-number::after {
+  content: '+';
+  color: var(--accent-color);
+  background-color: var(--accent-color);
+  width: 13px;
+  height: 22px;
+  background-size: cover;
+  background-position: center;
 }
 
 .recommendations-reason {
@@ -455,6 +469,8 @@ img {
 }
 
 .recommendations-pre-title {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 
   font-weight: 600;
@@ -466,7 +482,7 @@ img {
   content: '';
   height: 1px;
   width: 63px;
-  background-color: rgba(157, 164, 189, 0.6);
+  background-color: currentColor;
   margin-right: 21px;
 }
 
@@ -483,9 +499,10 @@ img {
 
 /* Наши мастера */
 
-.recommendations,
 .masters {
   padding: 130px 0;
+
+  background: #f7f7f7;
 }
 
 .masters-list {
@@ -499,11 +516,21 @@ img {
 }
 
 .masters-pre-title {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.masters-pre-title::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  background-color: currentColor;
+  margin-right: 21px;
 }
 
 .masters-title {
@@ -582,11 +609,21 @@ img {
 }
 
 .works-after-title {
+  display: flex;
+  align-items: center;
   margin-bottom: 44px;
 
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.works-after-title::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  background-color: currentColor;
+  margin-right: 21px;
 }
 
 /* Форма с контактами */
@@ -641,6 +678,8 @@ img {
 
 .footer-section {
   padding: 55px 0;
+
+  background: #f7f7f7;
 }
 
 .footer-container {
