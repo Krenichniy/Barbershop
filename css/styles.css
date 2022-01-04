@@ -17,6 +17,7 @@ bacground-color:
   --paragraph-color: #555555;
   --secondary-color: rgba(157, 164, 189, 0.6);
 }
+
 body {
   color: var(--primary-head-color);
   background-color: var(--primary-white-color);
@@ -26,6 +27,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.02em;
 }
+
 .title {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -33,6 +35,7 @@ body {
   line-height: 1.16;
   letter-spacing: 0.05em;
 }
+
 ul,
 ol {
   list-style: none;
@@ -43,6 +46,7 @@ ol {
 a {
   text-decoration: none;
 }
+
 p,
 h1,
 h2,
@@ -52,9 +56,11 @@ h5,
 h6 {
   margin: 0;
 }
+
 img {
   display: block;
 }
+
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -67,9 +73,11 @@ img {
 .header {
   padding: 32px 0;
 }
+
 .back {
   background-color: #191c26;
 }
+
 .header-container {
   display: flex;
   align-items: center;
@@ -154,6 +162,7 @@ img {
 .hero-item:first-child {
   margin-right: 40px;
 }
+
 /* Герой */
 .main {
   background-color: #191c26;
@@ -166,8 +175,6 @@ img {
   padding: 272px 0 206px 96px;
 }
 
-.hero {
-}
 .hero-link {
   color: var(--primary-head-color);
 
@@ -181,6 +188,8 @@ img {
 }
 
 .hero-pre-title {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 
   color: var(--secondary-color);
@@ -188,6 +197,14 @@ img {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.hero-pre-title::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  background-color: rgba(157, 164, 189, 0.6);
+  margin-right: 21px;
 }
 
 .hero-title {
@@ -221,9 +238,11 @@ img {
 .about-primary {
   display: flex;
 }
+
 .about-list {
   display: flex;
 }
+
 .about-item + .about-item {
   margin-left: 30px;
 }
@@ -233,11 +252,21 @@ img {
 }
 
 .about-pre-title {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.about-pre-title::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  background-color: rgba(157, 164, 189, 0.6);
+  margin-right: 21px;
 }
 
 .about-title {
@@ -280,8 +309,14 @@ img {
 
 /* Услуги и цены */
 .prices {
-  background-color: #191c26;
+  background-color: #111319;
+  background-image: url(../images/prices.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 130px 0;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .prices-lists {
@@ -292,16 +327,44 @@ img {
 
 .prices-list-first,
 .prices-list-second {
+  width: 50%;
   padding: 30px 40px;
   outline: 1px solid red;
+}
+
+.prices-list-first {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list-second {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .prices-item {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+
+.prices-services {
+  order: -1;
+}
+
+.prices-item::before {
+  content: '';
+  height: 1px;
+  flex-grow: 1;
+  background: rgba(157, 164, 189, 0.12);
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 
 .prices-pre-title {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 
   color: var(--secondary-color);
@@ -309,6 +372,14 @@ img {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.prices-pre-title::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  background-color: rgba(157, 164, 189, 0.6);
+  margin-right: 21px;
 }
 
 .prices-title {
@@ -319,7 +390,6 @@ img {
 
 .prices-services {
   color: var(--primary-grey-color);
-
   font-size: 18px;
   line-height: 1.66;
 }
@@ -333,7 +403,8 @@ img {
 }
 
 .centered {
-  margin-left: 500px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Наши достижения */
@@ -341,6 +412,7 @@ img {
 .recommendations {
   padding: 121px 0 130px 0;
 }
+
 .recom {
   display: flex;
   align-items: center;
@@ -390,6 +462,14 @@ img {
   text-transform: uppercase;
 }
 
+.recommendations-pre-title::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  background-color: rgba(157, 164, 189, 0.6);
+  margin-right: 21px;
+}
+
 .recommendations-title {
   margin-bottom: 20px;
 }
@@ -401,7 +481,9 @@ img {
   line-height: 1.67;
 }
 
-/* Мастера */
+/* Наши мастера */
+
+.recommendations,
 .masters {
   padding: 130px 0;
 }
@@ -464,6 +546,7 @@ img {
   align-items: center;
 
   color: var(--primary-head-color);
+
   border-radius: 50%;
 }
 
@@ -483,6 +566,7 @@ img {
 }
 
 /* Наши работы */
+
 .works {
   padding: 130px 0;
 }
@@ -506,10 +590,12 @@ img {
 }
 
 /* Форма с контактами */
+
 .contacts-bottom {
   padding: 130px 0;
   background-color: #191c26;
 }
+
 .contacts-bottom-title {
   margin-bottom: 40px;
 
@@ -551,7 +637,8 @@ img {
   text-transform: uppercase;
 }
 
-/* Футер */
+/*Футер  */
+
 .footer-section {
   padding: 55px 0;
 }
