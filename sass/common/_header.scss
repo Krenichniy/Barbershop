@@ -1,0 +1,57 @@
+// Хедер
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 32px 0;
+
+  &-container {
+    @include flex(flex, center, null);
+  }
+
+  &-list {
+    @include flex(flex, null, null);
+  }
+}
+
+.back {
+  background-color: #191c26;
+}
+
+.header-list__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.header-list__link {
+  color: var(--primary-white-color);
+
+  @include font(600, 12px, 1.33, 0.1em);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header-link {
+  color: var(--primary-white-color);
+
+  @include font(600, 12px, 1.33, 0.1em);
+
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.logo {
+  margin-right: 70px;
+}
+
+.contacts {
+  margin-left: auto;
+}

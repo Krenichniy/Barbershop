@@ -1,0 +1,36 @@
+// О нас
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+
+  &-wrap,
+  &-list {
+    @include flex(flex, null, null);
+  }
+}
+
+.about-list__item + .about-list__item {
+  margin-left: 30px;
+}
+
+.about-main {
+  margin-left: 64px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__after-title {
+    margin-bottom: 20px;
+
+    @include font(null, 18px, 1.66, null);
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    color: var(--paragraph-color);
+
+    @include font(null, 14px, 1.86, null);
+  }
+}

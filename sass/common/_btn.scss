@@ -1,0 +1,42 @@
+// Кнопки
+
+.button {
+  min-width: 160px;
+  min-height: 40px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  padding: 12px 20px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.dark-btn {
+  color: var(--primary-head-color);
+  background-color: transparent;
+
+  transition: color $cubic, backgound-color $cubic;
+
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+  }
+}
+
+.light-btn {
+  margin-left: 40px;
+
+  color: var(--primary-white-color);
+  background-color: transparent;
+  transition: backgound-color $cubic;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}

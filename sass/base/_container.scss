@@ -1,0 +1,40 @@
+body {
+  background-color: var(--primary-white-color);
+
+  font-family: 'Open Sans', sans-serif;
+  @include font(null, 11px, 1.36, 0.02em);
+
+  color: var(--primary-head-color);
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  @include font(700, 42px, 1.16, 0.05em);
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+}
+
+.pre-title {
+  @include flex(flex, center, null);
+
+  margin-bottom: 20px;
+
+  @include font(600, null, null, 0.1em);
+
+  text-transform: uppercase;
+}
+
+.pre-title::before {
+  content: '';
+  height: 1px;
+  width: 63px;
+  margin-right: 21px;
+
+  background-color: currentColor;
+}

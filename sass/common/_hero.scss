@@ -1,0 +1,60 @@
+// Sidebar
+
+.hero {
+  &-block {
+    @include flex(flex, null, null);
+  }
+
+  &-block__list {
+    width: 93px;
+  }
+
+  &-list__item:first-child {
+    margin-right: 40px;
+  }
+}
+
+.hero-list__link {
+  color: var(--primary-head-color);
+
+  @include font(600, null, null, 0.2em);
+
+  &-list__link:hover,
+  &-list__link:focus {
+    color: var(--accent-color);
+  }
+}
+
+// Герой
+.hero-main {
+  background-color: #191c26;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url(../images/hero-back.jpg);
+  flex-grow: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 272px 0 206px 96px;
+
+  &__pre-title {
+    color: var(--secondary-color);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    color: var(--primary-white-color);
+
+    font-family: 'Raleway', sans-serif;
+
+    @include font(700, 72px, 1.18, 0.05em);
+  }
+
+  &__after-title {
+    max-width: 400px;
+    margin-bottom: 20px;
+
+    color: var(--primary-grey-color);
+    @include font(null, 18px, 1.67, null);
+  }
+}
