@@ -5,8 +5,18 @@
     @include flex(flex, null, null);
   }
 
-  &-block__list {
+  &-sidebar {
     width: 93px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 23px;
+    padding-bottom: 40px;
+  }
+  &-block__list {
+    display: flex;
+    transform: rotate(-90deg) translateX(-15px);
+    transform-origin: top left;
+    align-items: center;
   }
 
   &-list__item:first-child {
@@ -14,13 +24,21 @@
   }
 }
 
+.hero-block__list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--primary-head-color);
+  margin-right: 40px;
+}
+
 .hero-list__link {
   color: var(--primary-head-color);
 
   @include font(600, null, null, 0.2em);
-
-  &-list__link:hover,
-  &-list__link:focus {
+  transition: color $cubic;
+  &:hover,
+  &:focus {
     color: var(--accent-color);
   }
 }

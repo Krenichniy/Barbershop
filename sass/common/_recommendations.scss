@@ -5,26 +5,29 @@
 
   &-wrap {
     display: flex;
-    align-items: center;
+  }
+
+  &-wrap__side,
+  &-text {
+    width: calc(50% - 30px);
   }
 
   &-wrap__side {
-    margin-right: 130px;
+    display: flex;
+    justify-content: center;
   }
 }
 
 .recommendations-list {
-  @include flex(flex, null, flex-end);
+  width: 370px;
+  @include flex(flex, null, null);
 
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
 
   &__item {
     width: 170px;
     height: 133px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+
     padding: 20px 24px;
     background: #f7f7f7;
     text-align: center;
@@ -33,6 +36,7 @@
 
 .recommendations-list__item:nth-child(2n) {
   margin-top: 35px;
+  margin-left: 30px;
 }
 
 .recommendations-list__number {

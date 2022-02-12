@@ -20,7 +20,7 @@
   color: var(--primary-head-color);
   background-color: transparent;
 
-  transition: color $cubic, backgound-color $cubic;
+  transition: color $cubic, background-color $cubic;
 
   &:hover,
   &:focus {
@@ -34,7 +34,7 @@
 
   color: var(--primary-white-color);
   background-color: transparent;
-  transition: backgound-color $cubic;
+  transition: background-color $cubic;
   &:hover,
   &:focus {
     background-color: var(--accent-color);
