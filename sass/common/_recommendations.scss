@@ -49,11 +49,12 @@
   &::after {
     content: '+';
     color: var(--accent-color);
-    background-color: var(--accent-color);
-    width: 13px;
-    height: 22px;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    top: 7px;
+    margin-left: 2px;
+    @include font(600, 16px, 1.375, null);
+
+    vertical-align: top;
   }
 }
 
