@@ -39,10 +39,7 @@
   outline: none;
 
   &::placeholder {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include font(600, 11px, 1.36, 0.1em);
     text-transform: uppercase;
 
     color: rgba(157, 164, 189, 0.4);
@@ -71,10 +68,7 @@
   outline: none;
 
   &::placeholder {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
+    @include font(600, 11px, 1.36, 0.1em);
     text-transform: uppercase;
 
     color: rgba(157, 164, 189, 0.4);
@@ -137,7 +131,6 @@
 
   color: var(--primary-white-color);
 
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  @include font(600, null, null, 0.1em);
   text-transform: uppercase;
 }

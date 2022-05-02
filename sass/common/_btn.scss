@@ -8,10 +8,7 @@
   padding: 12px 20px;
 
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
+  @include font(600, 12px, 1.33, 0.09em);
   text-transform: uppercase;
   cursor: pointer;
 }
