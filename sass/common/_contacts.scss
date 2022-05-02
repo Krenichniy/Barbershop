@@ -12,7 +12,7 @@
 }
 
 .contacts-container {
-  display: flex;
+  @include flex(flex, null, space-between);
 }
 
 .contacts-form {
@@ -24,8 +24,8 @@
 }
 
 .form-box {
-  display: flex;
-  justify-content: space-between;
+  @include flex(flex, null, space-between);
+
   width: 100%;
   margin-bottom: 44px;
 }
@@ -101,31 +101,27 @@
 }
 
 .info {
+  @include flex(flex, center, null);
+
   color: var(--primary-grey-color);
 
   font-size: 18px;
   line-height: 1.67;
+
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .bottom-list {
   max-width: 270px;
-}
-
-.bottom-address {
-  margin-bottom: 20px;
-
-  font-style: normal;
-}
-
-.bottom-link {
-  display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 .bottom-link-mail {
-  display: inline-block;
-  margin-bottom: 70px;
-
   text-decoration-line: underline;
 }
 
@@ -147,6 +143,17 @@
   }
 }
 
-.adress {
-  display: flex;
+.bottom-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-icon {
+  flex-shrink: 0;
+  margin-right: 16px;
+  stroke: currentColor;
+}
+
+.map-icon {
+  align-self: flex-start;
+  margin-top: 6px;
 }
