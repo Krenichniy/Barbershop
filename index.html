@@ -322,9 +322,21 @@
             <h2 class="contacts-form__title title">Онлайн-запись</h2>
 
             <form action="#" class="form-wrap">
-              <input type="text" class="form-wrap__text" placeholder="Имя*">
-              <input type="tel" class="form-wrap__phone" placeholder="Телефон*">
-              <textarea name="" id=""  rows="5" class="form-wrap__message" placeholder="сообщение"></textarea>
+             <div class="form-box">
+               <label for="" class="form-box__cont">
+                 <input type="text" class="form-box__text" placeholder=" ">
+               <span class="form-box__name">Имя*</span>
+                </label>
+               <label class="form-box__cont">  
+                <input type="tel" class="form-box__text" placeholder=" ">
+              <span class="form-box__name">Телефон*</span> 
+              </label>
+             </div>
+             <label for="" class="form-wrap-cont form-box__cont">
+                  <textarea name="" id=""  rows="5" class="form-wrap__message form-box__text" placeholder=" "></textarea>
+                  <span class="form-box__name">Сообщение</span>
+             </label>
+              
             </form>
             <button type="button" class="light-btn  button">отправить</button>
           </section>
@@ -333,14 +345,26 @@
           
           <ul class="bottom-list">
             <li class="bottom-item">
-              <address class="bottom-address info">ул. Васильковая, 7А Киев, 08132</address>
+              <a href="" class="adress"><address class="bottom-address info">
+                <svg class="map-icon" height = "24" widdth = "24">
+                  <use href = "images/icon.svg#icon-map-pin"></use>
+                </svg>
+                ул. Васильковая, 7А Киев, 08132</address></a>
             </li>
             <li class="bottom-item">
-              <a href="tel:+380441111111" class="bottom-link info">+38 044 111 11 11</a>
+              <a href="tel:+380441111111" class="bottom-link info">
+                <svg class="cell-phone-icon" height = "24" widdth = "24">
+                  <use href = "images/icon.svg#icon-phone"></use>
+                </svg>
+                +38 044 111 11 11</a>
             </li>
             <li class="footer-item">
               <a href="mailto:barbershop@email.com" class="bottom-link-mail info"
-                >barbershop@email.com</a
+                >
+                  <svg class="mail-icon" height = "24" widdth = "24">
+                  <use href = "images/icon.svg#icon-mail"></use>
+                </svg>
+                barbershop@email.com</a
               >
             </li>
           </ul>
@@ -354,14 +378,14 @@
     <footer>
       <section class="footer-section">
       <div class="container footer-container">
-          <p>&copy;Copyright 2020</p>
+          <p class="footer-container__copy">&copy;Copyright 2020</p>
 
-        <ul class=" footer-links">
-          <li class="hero-item">
-              <a href="#" class="hero-link">Instagram</a>
+        <ul class="footer-list">
+          <li class="hero-list__item">
+              <a href="#" class="hero-list__link">Instagram</a>
             </li>
-            <li class="hero-item">
-              <a href="#" class="hero-link">Youtube</a>
+            <li class="hero-list__item">
+              <a href="#" class="hero-list__link">Youtube</a>
             </li>
       </div>
       </section>

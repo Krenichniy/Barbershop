@@ -7,16 +7,16 @@
 
   &-sidebar {
     width: 93px;
-    display: flex;
-    align-items: flex-end;
+    @include flex(flex, flex-end, null);
+
     padding-left: 23px;
     padding-bottom: 40px;
   }
   &-block__list {
-    display: flex;
+    @include flex(flex, center, null);
+
     transform: rotate(-90deg) translateX(-15px);
     transform-origin: top left;
-    align-items: center;
   }
 
   &-list__item:first-child {

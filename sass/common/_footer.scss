@@ -7,10 +7,22 @@
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
+  @include flex(flex, null, space-between);
 }
 
-.footer-links {
-  display: flex;
+.footer-list {
+  @include flex(flex, center, null);
+
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: var(--primary-head-color);
+    margin-right: 40px;
+  }
+}
+
+.footer-container__copy {
+  @include font(600, 11px, 1.36, 0.2em);
+  color: var(--primary-grey-color);
 }
