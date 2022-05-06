@@ -1,11 +1,47 @@
 // О нас
 .about {
-  padding-top: 139px;
-  padding-bottom: 121px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @include min768 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include min1200 {
+    padding-top: 139px;
+    padding-bottom: 121px;
+  }
 
   &-wrap,
   &-list {
     @include flex(flex, null, null);
+  }
+
+  &-list {
+    @include max1199 {
+      display: none;
+    }
+  }
+
+  &-list-tablet {
+    @include max767 {
+      display: none;
+    }
+    @include min768 {
+      display: flex;
+      flex-direction: column;
+      flex-basis: calc(100% / 2 - 30px);
+    }
+    @include min1200 {
+      display: none;
+    }
+  }
+}
+
+.about-list-tablet__item {
+  &:first-child {
+    margin-bottom: 30px;
   }
 }
 
@@ -14,16 +50,23 @@
 }
 
 .about-main {
-  margin-left: 64px;
+  @include min768 {
+    margin-left: 64px;
+  }
 
   &__title {
+    @include max479 {
+      width: 330px;
+    }
     margin-bottom: 20px;
   }
 
   &__after-title {
     margin-bottom: 20px;
-
-    @include font(null, 18px, 1.66, null);
+    @include font(null, 16px, 1.62, null);
+    @include min768 {
+      @include font(null, 18px, 1.66, null);
+    }
   }
 
   &__text {

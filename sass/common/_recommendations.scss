@@ -1,32 +1,63 @@
 // Наши достижения
 
 .recommendations {
-  padding: 121px 0 130px 0;
+  padding: 84px 0;
+
+  @include min768 {
+    padding: 100px 0;
+  }
+
+  @include min1200 {
+    padding: 121px 0 130px 0;
+  }
 
   &-wrap {
     display: flex;
+    @include max1199 {
+      flex-direction: column-reverse;
+    }
+
+    @include min1200 {
+      justify-content: flex-end;
+      padding-left: 115px;
+    }
   }
 
   &-wrap__side,
   &-text {
-    width: calc(50% - 30px);
+    @include min1200 {
+      width: calc(50% - 30px);
+    }
   }
 
-  &-wrap__side {
-    display: flex;
-    justify-content: center;
-  }
+  // &-wrap__side {
+  //   display: flex;
+  //   justify-content: center;
+  // }
 }
 
 .recommendations-list {
-  width: 370px;
-  @include flex(flex, null, null);
+  @include min768-max1199 {
+    margin-left: auto;
+    width: 450px;
+  }
+
+  @include max1199 {
+    margin-top: 44px;
+  }
+  @include flex(flex, flex-end, space-between);
 
   flex-wrap: wrap;
 
+  @include min1200 {
+    width: 370px;
+    margin-left: 0;
+    margin-top: -4px;
+  }
+
   &__item {
-    width: 170px;
-    height: 133px;
+    width: calc((100% - 30px) / 2);
+    min-height: 133px;
 
     padding: 20px 24px;
     background: #f7f7f7;
@@ -34,9 +65,9 @@
   }
 }
 
-.recommendations-list__item:nth-child(2n) {
-  margin-top: 35px;
-  margin-left: 30px;
+.recommendations-list__item:nth-child(2n + 1) {
+  margin-top: -5px;
+  margin-bottom: 30px;
 }
 
 .recommendations-list__number {
@@ -61,6 +92,17 @@
 .recommendations-list__reason {
   font-weight: 600;
   text-align: center;
+}
+
+.recommendations-text {
+  @include min768-max1199 {
+    width: 500px;
+  }
+
+  @include min1200 {
+    margin-left: 130px;
+    width: 500px;
+  }
 }
 
 .recommendations-text__title {

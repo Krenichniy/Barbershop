@@ -2,7 +2,7 @@
 
 .button {
   min-width: 160px;
-  min-height: 40px;
+  max-height: 40px;
   border: 1px solid var(--accent-color);
   border-radius: 25px;
   padding: 12px 20px;
@@ -27,7 +27,13 @@
 }
 
 .light-btn {
-  margin-left: 40px;
+  @include min768 {
+    margin-right: 4px;
+  }
+
+  @include min1200 {
+    margin-left: 40px;
+  }
 
   color: var(--primary-white-color);
   background-color: transparent;

@@ -1,0 +1,14 @@
+.mobile-nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include min768 {
+    display: none;
+  }
+}
+
+.mobile-wrap {
+  display: none;
+}

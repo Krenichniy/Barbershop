@@ -6,14 +6,21 @@
   }
 
   &-sidebar {
-    width: 93px;
-    @include flex(flex, flex-end, null);
+    display: none;
 
-    padding-left: 23px;
-    padding-bottom: 40px;
+    @include min768 {
+      @include flex(flex, flex-end, null);
+      width: 113px;
+
+      padding-bottom: 40px;
+    }
+    @include min1200 {
+      width: 97px;
+    }
   }
   &-block__list {
     @include flex(flex, center, null);
+    padding-top: 23px;
 
     transform: rotate(-90deg) translateX(-15px);
     transform-origin: top left;
@@ -45,14 +52,21 @@
 
 // Герой
 .hero-main {
-  background-color: #191c26;
-  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-    url(../images/hero-back.jpg);
+  position: relative;
+  display: flex;
   flex-grow: 1;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 272px 0 206px 96px;
+  align-items: center;
+  min-height: 580px;
+  padding-top: 25px;
+
+  @include min768 {
+    padding-top: 46px;
+    min-height: 680px;
+  }
+
+  @include min1200 {
+    padding-top: 66px;
+  }
 
   &__pre-title {
     color: var(--secondary-color);
@@ -65,14 +79,37 @@
 
     font-family: 'Raleway', sans-serif;
 
-    @include font(700, 72px, 1.18, 0.05em);
+    @include font(700, 48px, 1.16, 0.05em);
+
+    @include min1200 {
+      @include font(700, 72px, 1.18, 0.05em);
+    }
   }
 
   &__after-title {
     max-width: 400px;
-    margin-bottom: 20px;
 
     color: var(--primary-grey-color);
-    @include font(null, 18px, 1.67, null);
+
+    @include font(null, 16px, 1.62, null);
+
+    @include min1200 {
+      @include font(null, 18px, 1.67, null);
+    }
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  padding-left: 31px;
+
+  @include min768 {
+    padding-left: 70px;
+  }
+
+  @include min1200 {
+    padding-left: 94px;
   }
 }

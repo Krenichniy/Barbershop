@@ -1,17 +1,54 @@
 // Услуги и цены
 .prices {
   background-color: #111319;
-  background-image: url(../images/prices-min.png);
+
+  background-image: url('../images/barbershop/prices.mob-1x.png');
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/barbershop/prices.mob-2x.png');
+  }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 130px 0;
-  max-width: 1280px;
+  padding: 84px 0;
   margin: 0 auto;
 
+  @include min768 {
+    padding: 100px 0;
+
+    background-image: url('../images/barbershop/prices.tab-1x.png');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/barbershop/prices.tab-2x.png');
+    }
+  }
+
+  @include min1200 {
+    padding: 130px 0;
+    max-width: 1280px;
+
+    background-image: url('../images/barbershop/prices.desc-1x.png');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/barbershop/prices.desc-2x.png');
+    }
+  }
+
   &-lists {
-    @include flex(flex, null, center);
+    // width: 420px;
     margin-bottom: 50px;
+    padding: 30px 30px;
+
+    // @include min768 {
+    //   width: 420px;
+    // }
+    @include max1199 {
+      background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
+
+    @include min1200 {
+      @include flex(flex, null, center);
+    }
   }
 
   &__pre-title {
@@ -27,16 +64,26 @@
 
 .prices-list-light,
 .prices-list-dark {
-  width: 50%;
-  padding: 30px 40px;
+  @include min1200 {
+    width: 50%;
+    padding: 30px 40px;
+  }
 }
 
 .prices-list-light {
-  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  @include max1199 {
+    margin-bottom: 20px;
+  }
+
+  @include min1200 {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
 }
 
 .prices-list-dark {
-  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  @include min1200 {
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .prices-list__item {
@@ -59,15 +106,19 @@
 
 .prices-list__services {
   order: -1;
+}
+
+.prices-list__services,
+.prices-list__cost {
+  @include font(null, 14px, 2.14, null);
   color: var(--primary-grey-color);
-  @include font(null, 18px, 1.66, null);
+
+  @include min768 {
+    @include font(null, 18px, 1.66, null);
+  }
 }
 
 .prices-list__cost {
-  color: var(--primary-grey-color);
-
-  @include font(null, 18px, 1.66, null);
-
   text-align: right;
 }
 
