@@ -3,6 +3,9 @@
 .hero {
   &-block {
     @include flex(flex, null, null);
+    @include max767 {
+      max-width: 480px;
+    }
   }
 
   &-sidebar {
