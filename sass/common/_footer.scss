@@ -1,17 +1,36 @@
 //Футер
 
 .footer-section {
-  padding: 55px 0;
+  padding: 44px 0;
 
   background: #f7f7f7;
+  @include min768 {
+    padding: 55px 0;
+  }
 }
 
 .footer-container {
-  @include flex(flex, null, space-between);
+  @include flex(flex, null, null);
+
+  @include max767 {
+    flex-direction: column-reverse;
+  }
+
+  @include min768 {
+    @include flex(flex, null, space-between);
+  }
 }
 
 .footer-list {
-  @include flex(flex, center, null);
+  @include flex(flex, center, flex-end);
+
+  @include max767 {
+    margin-bottom: 20px;
+  }
+
+  @include min768 {
+    @include flex(flex, center, null);
+  }
 
   &::before {
     content: '';

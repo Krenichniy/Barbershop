@@ -1,22 +1,36 @@
 /* Форма с контактами */
 
 .contacts-bottom {
-  padding: 130px 0;
   background-color: #191c26;
-  background-image: url(../images/contacts.png);
-  background-position: right;
-  background-size: calc(50% - 15px);
-  background-repeat: no-repeat;
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 .contacts-container {
-  @include flex(flex, null, space-between);
+  @include min1200 {
+    @include flex(flex, null, space-between);
+  }
+}
+
+.contacts-form,
+.contacts-value {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  @include min768 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include min1200 {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  @include max767 {
+    text-align: center;
+  }
 }
 
 .contacts-form {
-  width: calc((100% - 40px) / 2);
+  @include min1200 {
+    width: calc((100% - 40px) / 2);
+  }
 }
 
 .contacts-form .button {
@@ -24,17 +38,28 @@
 }
 
 .form-contact-box {
-  @include flex(flex, null, space-between);
+  @include min768 {
+    @include flex(flex, null, space-between);
 
-  width: 100%;
+    width: 100%;
+  }
+
   margin-bottom: 44px;
 }
 
 .form-box__cont {
-  width: calc((100% - 30px) / 2);
   position: relative;
   display: block;
   font-size: 18px;
+  @include min768 {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+.name {
+  @include max767 {
+    margin-bottom: 44px;
+  }
 }
 
 .form-box__name {
@@ -84,12 +109,41 @@
 }
 
 .contacts-value {
-  width: calc((100% - 40px) / 2);
-  padding-left: 100px;
+  background-image: url('../images/barbershop/contacts.mob-1x.png');
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/barbershop/contacts.mob-2x.png');
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // margin: 0 auto;
+
+  @include min768 {
+    background-image: url('../images/barbershop/contacts.tab-1x.png');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/barbershop/contacts.tab-2x.png');
+    }
+  }
+
+  @include min1200 {
+    width: calc((100% - 40px) / 2);
+    padding-left: 100px;
+    max-width: 1280px;
+    background-image: url('../images/barbershop/contacts.desc-1x.png');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/barbershop/contacts.desc-2x.png');
+
+      // background-size: calc(50% - 15px);
+      //  background-position: right;
+    }
+  }
 }
 
 .contacts-form__title {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 
   color: var(--primary-white-color);
 }
@@ -117,8 +171,16 @@
 }
 
 .bottom-list {
-  max-width: 270px;
-  margin-bottom: 70px;
+  margin-bottom: 44px;
+
+  @include min768 {
+    max-width: 270px;
+    margin-bottom: 0;
+  }
+  @include min1200 {
+    max-width: 270px;
+    margin-bottom: 70px;
+  }
 }
 
 .bottom-link-mail {
@@ -156,4 +218,16 @@
 .map-icon {
   align-self: flex-start;
   margin-top: 6px;
+}
+
+.contacts-wrapper {
+  @include min768-max1199 {
+    @include flex(flex, null, space-between);
+  }
+}
+
+.work-time {
+  @include min768-max1199 {
+    width: calc(calc((100% - 30px) / 2));
+  }
 }

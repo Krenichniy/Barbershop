@@ -315,16 +315,34 @@
       <!-- Наши мастера -->
       <section class="masters" id="masters">
         <div class="container">
+          <div class="masters-position">
+          <div class="masters-wrap">
           <p class="masters__pre-title pre-title">для настоящих ценителей атмосферы</p>
           <h2 class="masters__title title">Наши мастера</h2>
+          </div>
           <ul class="masters-list">
             <li class="masters-list__item">
-              <img
-                src="./images/John.jpg"
-                alt="мужчина с часами на татуированой руке"
-                width="370"
-                height="346"
-              />
+                  <picture>
+                <source
+                  srcset="./images/barbershop/masters.desc1-1x.jpg 1x, ./images/barbershop/masters.desc1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/masters.tab1-1x.jpg 1x,
+                    ./images/barbershop/masters.tab1-2x.jpg  2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/masters.mob1-1x.jpg    1x,
+                   ./images/barbershop/masters.mob1-2x.jpg  2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="#" alt="" />
+              </picture> 
               <div class="masters-descript">
                 <h3 class="masters-descript__name">John Smith</h3>
               <p class="masters-descript__degree">Extreme Barber</p>
@@ -355,12 +373,29 @@
             </li>
 
             <li class="masters-list__item">
-              <img
-                src="./images/Michele.jpg"
-                alt="мужчина в белой рубашке"
-                width="370"
-                height="346"
-              />
+                  <picture>
+                <source
+                  srcset="./images/barbershop/masters.desc2-1x.jpg 1x, 
+                  ./images/barbershop/masters.desc2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/masters.tab2-1x.jpg 1x,
+                    ./images/barbershop/masters.tab2-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/masters.mob2-1x.jpg 1x,
+                    ./images/barbershop/masters.mob2-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="#" alt="" />
+              </picture>
               <div class="masters-descript">
               <h3 class="masters-descript__name">Michele Doe</h3>
               <p class="masters-descript__degree">Extreme Barber</p>
@@ -391,7 +426,29 @@
             </li>
 
             <li class="masters-list__item">
-              <img src="./images/Alan.jpg" alt="мужчина в шапке" width="370" height="346" />
+                   <picture>
+                <source
+                  srcset="./images/barbershop/masters.desc3-1x.jpg 1x, 
+                  ./images/barbershop/masters.desc3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/masters.tab3-1x.jpg 1x,
+                    ./images/barbershop/masters.tab3-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/masters.mob3-1x.jpg 1x,
+                    ./images/barbershop/masters.mob3-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="#" alt="" />
+              </picture>
               <div class="masters-descript">
               <h3 class="masters-descript__name">Alan Black</h3>
               <p class="masters-descript__degree">Extreme Barber</p>
@@ -421,6 +478,7 @@
               </div>
             </li>
           </ul>
+          </div>
         </div>
       </section>
 
@@ -431,29 +489,118 @@
           <p class="works__after-title pre-title">На латинском языке “барба” означает “борода”</p>
           <ul class="works-list">
             <li class="works-list__item">
-              <img src="./images/hair.jpg" alt="" width="270" height="360" />
+                 <picture>
+                <source
+                  srcset="./images/barbershop/gallery.desc1-1x.jpg 1x, 
+                          ./images/barbershop/gallery.desc1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/gallery.tab1-1x.jpg 1x,
+                    ./images/barbershop/gallery.tab1-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/gallery.mob1-1x.jpg 1x,
+                   ./images/barbershop/gallery.mob1-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="#" alt="" />
+              </picture> 
             </li>
             <li class="works-list__item">
-              <img src="./images/shaving.jpg" alt="" width="270" height="360" />
+               <picture>
+                <source
+                  srcset="./images/barbershop/gallery.desc2-1x.jpg 1x, 
+                          ./images/barbershop/gallery.desc2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/gallery.tab2-1x.jpg 1x,
+                    ./images/barbershop/gallery.tab2-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/gallery.mob2-1x.jpg 1x,
+                   ./images/barbershop/gallery.mob2-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="#" alt="" />
+              </picture> 
             </li>
             <li class="works-list__item">
-              <img src="./images/mask.jpg" alt="" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="./images/barbershop/gallery.desc3-1x.jpg 1x,
+                          ./images/barbershop/gallery.desc3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/gallery.tab3-1x.jpg 1x,
+                    ./images/barbershop/gallery.tab3-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/gallery.mob3-1x.jpg 1x,
+                   ./images/barbershop/gallery.mob3-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="#" alt="" />
+              </picture> 
             </li>
             <li class="works-list__item">
-              <img src="./images/hand.jpg" alt="" width="270" height="360" />
+               <picture>
+                <source
+                  srcset="./images/barbershop/gallery.desc4-1x.jpg 1x, 
+                          ./images/barbershop/gallery.desc4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/gallery.tab4-1x.jpg 1x,
+                    ./images/barbershop/gallery.tab4-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbershop/gallery.mob4-1x.jpg 1x,
+                   ./images/barbershop/gallery.mob4-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="#" alt="" />
+              </picture> 
             </li>
           </ul>
         </div>
       </section>
 
       <div class="contacts-bottom" id="contacts">
-        <div class="container contacts-container">
-          <section class="contacts-form">
+        <div class=" contacts-container">
+
+          <section class="contacts-form container">
             <h2 class="contacts-form__title title">Онлайн-запись</h2>
 
             <form action="#" class="form-wrap">
              <div class="form-contact-box">
-               <label for="" class="form-box__cont">
+               <label for="" class="form-box__cont name">
                  <input type="text" class="form-box__text" placeholder=" ">
                <span class="form-box__name">Имя*</span>
                 </label>
@@ -470,9 +617,12 @@
             </form>
             <button type="button" data-modal-open4 class="light-btn  button">отправить</button>
           </section>
-          <section class="contacts-value">
+
+          <section class="contacts-value ">
+            <div class="container">
           <h2 class="contacts-bottom-title title">Контакты</h2>
           
+          <div class="contacts-wrapper">
         <div class="contacts-wrap">
             <ul class="bottom-list">
             <li class="bottom-list__item">
@@ -500,8 +650,13 @@
             </li>
           </ul>
         </div>
+
+        <div class="work-time">
           <h3 class="bottom-shedule">время работы</h3>
           <p class="shedule-time info">Ежедневно с 9:00 до 22:00</p>
+          </div>
+          </div>
+          </div>
         </section>
         </div>
       </div>

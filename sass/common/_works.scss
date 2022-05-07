@@ -1,16 +1,44 @@
 // Наши работы
 
 .works {
-  padding: 130px 0;
+  padding: 84px 0;
+
+  @include min768 {
+    padding: 100px 0;
+  }
+
+  @include min1200 {
+    padding: 130px 0;
+  }
 
   &-list {
-    display: flex;
-    margin-right: -30px;
+    margin-bottom: -30px;
+
+    @include min768 {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -30px;
+      margin-bottom: -30px;
+    }
+    @include min1200 {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-right: -30px;
+    }
   }
 
   &-list__item {
-    flex-basis: calc(100% / 4 - 30px);
-    margin-right: 30px;
+    margin-bottom: 30px;
+
+    @include min768 {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+    @include min1200 {
+      flex-basis: calc(100% / 4 - 30px);
+      margin-right: 30px;
+    }
   }
 
   &__after-title {
