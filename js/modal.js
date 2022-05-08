@@ -4,6 +4,7 @@
     openModalBtn2: document.querySelector('[data-modal-open2]'),
     openModalBtn3: document.querySelector('[data-modal-open3]'),
     openModalBtn4: document.querySelector('[data-modal-open4]'),
+    openModalBtn5: document.querySelector('[data-modal-open5]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
   };
@@ -12,6 +13,7 @@
   refs.openModalBtn2.addEventListener('click', toggleModal);
   refs.openModalBtn3.addEventListener('click', toggleModal);
   refs.openModalBtn4.addEventListener('click', toggleModal);
+  refs.openModalBtn5.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {

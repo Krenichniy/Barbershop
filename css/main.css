@@ -1670,6 +1670,7 @@ body {
   -webkit-perspective: 400px;
           perspective: 400px;
   background: rgba(0, 0, 0, 0.2);
+  z-index: 999;
 }
 
 .modal {
