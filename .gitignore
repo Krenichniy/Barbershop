@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+
+
+#    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+#     <script type="text/javascript" src="./js/slick.min.js"></script>
+#     <script src="./js/init.js"></script> -->
+#     <!-- <script type="text/javascript" src="./js/main.js"></script>  -->

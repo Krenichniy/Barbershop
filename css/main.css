@@ -24,6 +24,7 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
   height: auto;
 }
 
@@ -508,6 +509,7 @@ body {
 @media screen and (max-width: 767px) {
   .hero-block {
     max-width: 480px;
+    padding: 0;
   }
 }
 
@@ -550,6 +552,18 @@ body {
 
 .hero-list__item:first-child {
   margin-right: 40px;
+}
+
+.slider__img {
+  min-height: 580px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .slider__img {
+    min-height: 680px;
+  }
 }
 
 .hero-block__list::before {
