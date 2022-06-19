@@ -51,6 +51,7 @@
 
 .about-main {
   @include min768 {
+    max-width: 480px;
     margin-left: 64px;
   }
 
