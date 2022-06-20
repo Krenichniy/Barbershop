@@ -31,7 +31,7 @@
     @include min768 {
       display: flex;
       flex-direction: column;
-      flex-basis: calc(100% / 2 - 30px);
+      flex-basis: calc((100% - 30px) / 2);
     }
     @include min1200 {
       display: none;
@@ -51,6 +51,10 @@
 
 .about-main {
   @include min768 {
+    flex-basis: calc((100% - 30px) / 2);
+    margin-left: 30px;
+  }
+  @include min1200 {
     max-width: 480px;
     margin-left: 64px;
   }
@@ -60,12 +64,15 @@
       width: 330px;
     }
     margin-bottom: 20px;
+    @include max1199 {
+      @include font(700, 28px, 1.18, 0.05em);
+    }
   }
 
   &__after-title {
     margin-bottom: 20px;
     @include font(null, 16px, 1.62, null);
-    @include min768 {
+    @include min1200 {
       @include font(null, 18px, 1.66, null);
     }
   }
@@ -76,5 +83,12 @@
     color: var(--paragraph-color);
 
     @include font(null, 14px, 1.86, null);
+  }
+}
+
+.only-tab {
+  display: none;
+  @include min768-max1199 {
+    display: block;
   }
 }
